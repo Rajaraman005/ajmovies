@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:ital@1&family=Roboto:ital@0;1&display=swap" 
+rel="stylesheet">
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" 
+referrerpolicy="no-referrer" />
+<link rel="shortcut icon" href="logo.WebP" type="image/x-icon">
+
+    <title>Aj Movies</title>
+</head>
+<b>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+               <a href="index.html"><h1 class="logo">AjMovies</h1></a> 
+            </div>
+            <div class="menu-container"> 
+                <ul class="menu-list">
+                    <li class="menu-list-item active"><a href="#">Home</a></li>
+                    <li class="menu-list-item active"><a href="#movies">Movies</a></li>
+                    <li class="menu-list-item active"><a href="">Series</a></li>
+                    <li class="menu-list-item active"><a href="">Popular</a></li>
+                    <li class="menu-list-item active"><a href="">Trends</a></li>
+
+                </ul>
+              </div>
+             <form>
+	<label for="search">Search</label>
+	<input required="" pattern=".*\S.*" autocomplete="off" type="search" class="input" id="search">
+	<span class="caret"></span>
+    <div id="search-results" ></div>
+</form>
+
+              <div class="profile-container">
+                <img class="profile-picture" src="mainimg/ssr.WebP" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="sidebar">
+ 
+        <i class="left-menu-icon fas fa-home"></i>
+        <i class="left-menu-icon fas fa-users"></i>
+        <i class="left-menu-icon fas fa-bookmark"></i>
+        <i class="left-menu-icon fas fa-tv"></i>
+        <i class="left-menu-icon fas fa-hourglass-start"></i>
+        <i class="left-menu-icon fas fa-shopping-cart"></i>
+        
+    </div>
+    
+    <div class="container" >
+        <div class="content-container">
+            <div class="featured-content">
+                <span id="featured-img-container" >
+                    <img class="featured-title" id="featured-img" src="" alt="">
+                </span>
+                <p class="featured-desc" id="featured-desc"></p>
+                <!-- <button class="featured-button" >WATCH</button> -->
+            </div>
+
+                    
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    
+                   <div class="movie-list" id="draggable-movie-list">
+                 <div class="movie-list" id="container">
+                        <div class="movie-list-item" id="movies">
+                            <img class="movie-list-item-img" src="mainimg/vs.WebP"  draggable="false" alt="">
+                            <span class="movie-list-item-title">Viswasam</span>
+                            <p class="movie-list-item-desc">A village ruffian, who settles disputes in his native, takes on a big 
+                                shot when he tries to sort out the rough patch in his marriage after several years.</p>
+                            <a href="video.html?id=TiDyv53adt0" class="movie-list-item-button" >Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="mainimg/leo.WebP" draggable="false" alt="">
+                            <span class="movie-list-item-title">LEO</span>
+                            <p class="movie-list-item-desc">Leo is an upcoming Indian Tamil-language action thriller film[2] directed by Lokesh Kanagaraj, who co-wrote it with Rathna Kumar and Deeraj Vaidy. 
+                                It is the third film in the Lokesh Cinematic Universe</p>
+                            <a href="video.html?id=qN3wfuPYTI4" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="mainimg/jailer.WebP"  draggable="false" alt="" >
+                            <span class="movie-list-item-title">Jailer</span>
+                            <p class="movie-list-item-desc">Jailer is a 2023 Indian Tamil-language action comedy film directed by Nelson Dilipkumar and produced 
+                                by Kalanithi Maran of Sun Pictures.</p>
+                            <a href="video.html?id=1F3hm6MfR1k" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="mainimg/jw.WebP"  draggable="false" alt="" >
+                            <span class="movie-list-item-title">Jawan</span>
+                            <p class="movie-list-item-desc">Jawan  is a 2023 Indian Hindi-language action thriller film co-written and directed by Atlee as his first Hindi film</p>
+                            <a href="video.html?id=COv52Qyctws" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="mainimg/vikram.WebP"  draggable="false" alt="" >
+                            <span class="movie-list-item-title">Vikram</span>
+                            <p class="movie-list-item-desc">Vikram is an Indian film actor, voice actor and a playback singer. He made his debut in the 1990 film En Kadhal Kanmani, which was followed by a series of Tamil and Telugu films and supporting roles in 
+                                </p>
+                            <a href="video.html?id=OKBMCL-frPU" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="mainimg/kantara.WebP"  draggable="false"alt="">
+                            <span class="movie-list-item-title">kantara</span>
+                            <p class="movie-list-item-desc">The film stars Shetty as a Kambala champion who is at loggerheads with an upright forest officer, Murali (played by Kishore). Kantara. Theatrical release poster.</p>
+                            <a href="video.html?id=ppYoIoW73PI" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="mainimg/naruto.WebP" draggable="false" alt="">
+                            <span class="movie-list-item-title">Naruto</span>
+                            <p class="movie-list-item-desc">Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. 
+                                It tells the story of Naruto Uzumaki, a young ninja who seeks recognition ...</p>
+                            <a href="video.html?id=22R0j8UKRzY" class="movie-list-item-button">Watch</a>
+                        </div>
+                    </div>
+                    
+
+
+                    </div>
+                    
+                    <i class="fas fa-chevron-right arrow"></i>
+                    
+                </div>
+                
+            </div>
+            
+          
+            
+            
+    
+       
+
+
+</script>
+  <script src="script.js" async>
+    
+  </script>
+</body>
+</html>

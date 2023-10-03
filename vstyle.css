@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  color: white;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+body {
+  background-color: #151515;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+::-webkit-scrollbar-track {
+  background: #151515;
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(189, 100%, 50%);
+
+  border-radius: 100vh;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(135, 100%, 50%);
+}
+
+.video-container {
+  position: relative;
+  padding-top: 28.125%; /* 16:9 aspect ratio (9 / 16 = 0.5625) */
+  overflow: hidden;
+  height: 20vh; /* Set to half of the screen height */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Set the height to 100% to fill the container */
+}
+/* CSS for movie details container */
+.movie-details-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+/* CSS for the image */
+#movieImage {
+  width: 254px;
+  height: 260px;
+}
+
+/* CSS for title and description container */
+.title-description-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* CSS for title */
+#movieTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* CSS for description */
+#movieDescription {
+  font-size: 16px;
+  padding-right: 15px;
+  text-align: justify;
+  text-align-last: left; /* You can change this to 'right', 'center', or 'justify' as needed */
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    padding-top: 75%; /* Adjust for other aspect ratios on smaller screens */
+  }
+  #movieImage {
+    width: 180px;
+    height: 150px;
+  }
+}

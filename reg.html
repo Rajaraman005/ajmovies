@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reg.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>REGISTRATION PAGE</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="reg.php" method="post">
+            <h1 class="log">Registration</h1>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" placeholder="Email" required>
+                <i class='bx bx-mail-send'></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <i class='bx bx-phone'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" id="passwordInput" placeholder="Password" required>
+                <div class="lock-icon">
+                    <i id="passwordToggleIcon" class="bx bx-hide"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="password" name="confirm_password" id="confirmPasswordInput" placeholder="Confirm Password" required>
+                <div class="lock-icon confirm-lock-icon">
+                    <!-- Add the correct class name "confirm-lock-icon" here -->
+                    <i id="confirmPasswordToggleIcon" class="bx bx-hide"></i>
+                </div>
+            </div>
+            <h3 id="mssg"></h3>
+            <button type="submit" class="btn" onclick="check()" id="reg">Register</button>
+            <div class="login-link">
+                <p>Already have an account? <a href="log.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+      function togglePasswordVisibility(inputId, iconId) {
+        const passwordInput = document.getElementById(inputId);
+        const passwordToggleIcon = document.getElementById(iconId);
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            passwordToggleIcon.classList.remove("bx-hide");
+            passwordToggleIcon.classList.add("bx-show");
+        } else {
+            passwordInput.type = "password";
+            passwordToggleIcon.classList.remove("bx-show");
+            passwordToggleIcon.classList.add("bx-hide");
+        }
+    }
+
+    const passwordToggle = document.querySelector(".lock-icon");
+
+    passwordToggle.addEventListener("click", function () {
+        togglePasswordVisibility("passwordInput", "passwordToggleIcon");
+    });
+
+    const confirmPasswordToggle = document.querySelector(".confirm-lock-icon");
+
+    confirmPasswordToggle.addEventListener("click", function () {
+        togglePasswordVisibility("confirmPasswordInput", "confirmPasswordToggleIcon");
+    });
+      // password match
+
+      function check(){
+
+        let pass = document.getElementById("passwordInput").value;
+        let cpass = document.getElementById("confirmPasswordInput").value;
+        let mssg = document.getElementById("mssg");
+        
+        if(pass.length != 0){
+            if(pass ===cpass){
+                mssg.textContent="PASSWORD MATCH";
+                message.style.backgroundColor="#fff4d4d";
+            }
+            else{
+                mssg.textContent="CHECK PASSWORD";
+                message.style.backgroundColor="red"
+            }
+        }
+
+        
+      }
+    
+  
+   
+    </script>
+</body>
+</html>
